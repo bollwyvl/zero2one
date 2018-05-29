@@ -6,7 +6,6 @@ version: {{ version }}
 install_in_dependency_order: True
 
 channels:
-  - file:///home/weg/Documents/projects/jupyterhub/zero2one/envs/_build/conda-bld/
   - https://repo.anaconda.com/pkgs/main/
   - https://conda.anaconda.org/conda-forge/
 
@@ -14,3 +13,5 @@ specs:
   - conda
   - jupyterhub
   - python >=3.6,<3.7
+  # this is noarch on conda-forge
+  - https://repo.anaconda.com/pkgs/main/linux-64/python-dateutil-2.7.3-py36_0.tar.bz2
