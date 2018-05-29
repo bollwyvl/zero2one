@@ -1,0 +1,19 @@
+name: zero2one
+
+commands:
+  construct:
+    unix: constructor . --output-dir docker/
+    env_spec: _build
+  build:
+    unix: cd python-dateutil-feedstock/recipe && conda build -c conda-forge .
+    env_spec: _build
+
+channels:
+  - conda-forge
+
+env_specs:
+  _build:
+    packages:
+      - constructor
+      - conda
+      - conda-build

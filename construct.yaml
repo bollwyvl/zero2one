@@ -1,0 +1,16 @@
+{% set version = "0.8.1" %}
+
+name: JupyterHubOne
+version: {{ version }}
+
+install_in_dependency_order: True
+
+channels:
+  - file:///home/weg/Documents/projects/jupyterhub/zero2one/envs/_build/conda-bld/
+  - https://repo.anaconda.com/pkgs/main/
+  - https://conda.anaconda.org/conda-forge/
+
+specs:
+  - conda
+  - jupyterhub
+  - python >=3.6,<3.7
